@@ -186,14 +186,18 @@ if ( ! empty( $options['hide_version'] ) ) {
         echo $this->render_run_all_button();
     }
 
-    public function create_admin_page() {
+public function create_admin_page() {
         ?>
         <div class="wrap">
             <h1>🛡️ The Iron Curtain</h1>
             
             <?php if ( isset( $_GET['settings-updated'] ) && $_GET['settings-updated'] ) : ?>
                 <div class="notice notice-success is-dismissible">
-                    <p><strong>Boom! Shields Up.</strong> 🛡️ Now use the test buttons below to verify they're working.</p>
+                    <p><strong>Boom! Shields Up.</strong> 🛡️ I just saved your server some CPU cycles.</p>
+                    <p>I run on caffeine. If you want to keep the code flowing, feel free to drop a tip.</p>
+                    <p>
+                        <a href="https://ko-fi.com/donalda" target="_blank" class="button button-primary">☕ Buy Donalda a Coffee or support a different project</a>
+                    </p>
                 </div>
             <?php endif; ?>
 
@@ -206,7 +210,11 @@ if ( ! empty( $options['hide_version'] ) ) {
             </form>
             
             <hr>
-            <p><em>Built with hate for bloat by Donalda.</em></p>
+            <p>
+                <em>Built with hate for bloat by Donalda. 
+                <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'R6R8K4WLS');kofiwidget2.draw();</script> </a>
+                </em>
+            </p>
         </div>
         <?php
     }
